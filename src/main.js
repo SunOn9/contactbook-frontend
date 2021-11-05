@@ -3,6 +3,7 @@ import App from './App.vue';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import router from "./router";
+import store from "./store";
 
 import { handle } from "./common/promise";
 createApp(App)
@@ -11,5 +12,5 @@ createApp(App)
             handle,
     }
 })
-.use(router).mount('#app');
+.use(store).use(router).mount('#app');
 
